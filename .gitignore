@@ -21,5 +21,10 @@ Homestead.yaml
 Homestead.json
 /.vagrant
 .phpunit.result.cache
+#phpstorm idea file
+/.idea
 
 backup
+.idea/workspace.xml
+.idea/workspace.xml
+.idea/FiMM_system.iml

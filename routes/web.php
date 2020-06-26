@@ -12,7 +12,7 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('auth.login');
 });
 
 Auth::routes();
@@ -38,6 +38,13 @@ Route::prefix('/user')->group(function () {
     Route::get('', 'CurrentUserController@show');
     Route::patch('', 'CurrentUserController@update');
     Route::patch('/password', 'CurrentUserController@updatePassword');
+});
+
+Route::prefix('/consultant')->group(function() {
+    Route::get('','ConsultantController@index')->name('consultant.index');
+    Route::get('{consultant}', 'ConsultantController@show')->name('consultant.show');
+    Route::get('/register','ConsultantController@create')->name('consultant.create');
+    Route::post('/register','ConsultantController@store')->name('consultant.store');
 });
 
 /*

@@ -40,11 +40,18 @@ Route::prefix('/user')->group(function () {
     Route::patch('/password', 'CurrentUserController@updatePassword');
 });
 
+Route::prefix('/system')->group(function(){
+    Route::get('','SystemController@index')->name('system.index');
+});
+
 Route::prefix('/consultant')->group(function() {
-    Route::get('','ConsultantController@index')->name('consultant.index');
-    Route::get('{consultant}', 'ConsultantController@show')->name('consultant.show');
+    Route::get('','ConsultantController@index')->name('consultant.list');
+    Route::get('/detail/{id}', 'ConsultantController@show')->name('consultant.show');
     Route::get('/register','ConsultantController@create')->name('consultant.create');
     Route::post('/register','ConsultantController@store')->name('consultant.store');
+    Route::patch('/approve/{id}','ConsultantController@approve')->name('consultant.approve');
+    Route::patch('/reject/{id}','ConsultantController@reject')->name('consultant.reject');
+    Route::delete('/{id}/destroy','ConsultantController@destroy')->name('consultant.delete');
 });
 
 /*

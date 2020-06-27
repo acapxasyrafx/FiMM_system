@@ -3,9 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use DB;
 
-class ConsultantController extends Controller
+class SystemController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,7 +13,7 @@ class ConsultantController extends Controller
      */
     public function index()
     {
-        return view('consultant.list');
+        //
     }
 
     /**
@@ -24,7 +23,7 @@ class ConsultantController extends Controller
      */
     public function create()
     {
-        return view('consultant.form');
+        //
     }
 
     /**
@@ -35,7 +34,7 @@ class ConsultantController extends Controller
      */
     public function store(Request $request)
     {
-        dd($request);
+        //
     }
 
     /**
@@ -81,15 +80,5 @@ class ConsultantController extends Controller
     public function destroy($id)
     {
         //
-    }
-
-    public function approve($id)
-    {
-
-    }
-
-    public function reject($id)
-    {
-
     }
 }

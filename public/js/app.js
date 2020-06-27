@@ -82035,6 +82035,12 @@ vue__WEBPACK_IMPORTED_MODULE_0___default.a.use(vue_router__WEBPACK_IMPORTED_MODU
     name: 'home',
     component: _views_Home_vue__WEBPACK_IMPORTED_MODULE_2__["default"]
   }, {
+    path: '/consultants',
+    name: 'consultants',
+    component: function component() {
+      return __webpack_require__.e(/*! import() */ 6).then(__webpack_require__.bind(null, /*! ./views/Consultant/List.vue */ "./resources/js/views/Consultant/List.vue"));
+    }
+  }, {
     path: '/tables',
     name: 'tables',
     component: function component() {
@@ -82253,8 +82259,8 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! C:\Users\acapx\Desktop\FiMM_system\resources\js\app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! C:\Users\acapx\Desktop\FiMM_system\resources\sass\app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! D:\Devs\FiMM_system\resources\js\app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! D:\Devs\FiMM_system\resources\sass\app.scss */"./resources/sass/app.scss");
 
 
 /***/ })
